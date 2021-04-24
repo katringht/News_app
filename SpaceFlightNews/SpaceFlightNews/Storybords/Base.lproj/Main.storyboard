@@ -12,13 +12,14 @@
         <!--News Collection View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="NewsCollectionView" customModule="SpaceFlightNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DUB-Fp-VvV">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Seo-6x-wWf">
                                     <size key="itemSize" width="390" height="180"/>
@@ -39,7 +40,6 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUz-CU-qFP">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="180"/>
-                                                    <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA celebrates first historic helicopter flight on Mars" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eP-a6-QyJ">
                                                     <rect key="frame" x="20" y="118" width="350" height="52"/>
@@ -77,7 +77,7 @@
                             <constraint firstItem="DUB-Fp-VvV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="786-Id-ldt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DUB-Fp-VvV" secondAttribute="trailing" id="CHe-yh-9MV"/>
                             <constraint firstItem="DUB-Fp-VvV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hxm-wb-X1j"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DUB-Fp-VvV" secondAttribute="bottom" id="zbX-rg-G1p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DUB-Fp-VvV" secondAttribute="bottom" constant="-34" id="zbX-rg-G1p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bFB-mB-565"/>
@@ -85,9 +85,8 @@
                         <outlet property="collectionView" destination="DUB-Fp-VvV" id="vHu-sn-Sh2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023.1884057971015" y="76.339285714285708"/>
+            <point key="canvasLocation" x="895.6521739130435" y="75.669642857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Tx-F7-l2h">
@@ -113,9 +112,6 @@
     </scenes>
     <resources>
         <image name="bwairborne" width="320" height="240"/>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
