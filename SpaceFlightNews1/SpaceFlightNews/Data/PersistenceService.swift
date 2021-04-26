@@ -1,18 +1,20 @@
 //
-//  CoreDataStack.swift
-//  SpaceFlightNews
+//  PersistanceService.swift
+//  SpaceFlightNews1
 //
-//  Created by Ekaterina Tarasova on 24.04.2021.
+//  Created by Ekaterina Tarasova on 25.04.2021.
 //
 
-import UIKit
+import Foundation
 import CoreData
 
-class CoreDataStack: NSObject {
+class PersistenceService: NSObject {
     
     //create a singleton
-    static let sharedInstance = CoreDataStack()
+    static let shared = PersistenceService()
     private override init() {}
+    
+    var context: NSManagedObjectContext { return persistentContainer.viewContext}
     
     // MARK: - Core Data stack
     
@@ -45,11 +47,12 @@ class CoreDataStack: NSObject {
     
     // MARK: - Core Data Saving support
     
-    func saveContext () {
+    func save (completion: @escaping () -> Void) {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
                 try context.save()
+                completion()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -59,10 +62,21 @@ class CoreDataStack: NSObject {
         }
     }
     
-    func applicationDocumentsDirectory() {
-        if let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last {
-            print(url.absoluteString)
+//    func applicationDocumentsDirectory() {
+//        if let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last {
+//            print(url.absoluteString)
+//        }
+//    }
+    
+    func fetch<T: NSManagedObject>(_ type : T.Type, completion: @escaping ([T]) -> Void){
+        let request = NSFetchRequest<T>(entityName: String(describing: type))
+        
+        do {
+            let objects = try context.fetch(request)
+            completion(objects)
+        } catch {
+            print(error)
+            completion([])
         }
     }
-    
 }

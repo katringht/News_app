@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214C9C272635D0CA001AB356 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C9C262635D0CA001AB356 /* NetworkingService.swift */; };
+		214C9C2B2635D5D8001AB356 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C9C2A2635D5D8001AB356 /* PersistenceService.swift */; };
+		214C9C302635E9A5001AB356 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C9C2F2635E9A5001AB356 /* DataStore.swift */; };
+		214C9C332635F4AA001AB356 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C9C322635F4AA001AB356 /* Endpoint.swift */; };
 		2168A614262DF06700C61A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168A613262DF06700C61A12 /* AppDelegate.swift */; };
 		2168A616262DF06700C61A12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168A615262DF06700C61A12 /* SceneDelegate.swift */; };
 		2168A618262DF06700C61A12 /* NewsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168A617262DF06700C61A12 /* NewsCollectionView.swift */; };
@@ -15,15 +19,17 @@
 		2168A620262DF06800C61A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2168A61F262DF06800C61A12 /* Assets.xcassets */; };
 		2168A623262DF06800C61A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2168A621262DF06800C61A12 /* LaunchScreen.storyboard */; };
 		2168A62E262DF3DC00C61A12 /* NewsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168A62D262DF3DC00C61A12 /* NewsCells.swift */; };
-		218D4E7F26344342003D3714 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4E7E26344342003D3714 /* APIService.swift */; };
 		218D4E8426344672003D3714 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4E8226344672003D3714 /* News+CoreDataClass.swift */; };
 		218D4E8526344672003D3714 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4E8326344672003D3714 /* News+CoreDataProperties.swift */; };
-		218D4E8926344713003D3714 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4E8826344713003D3714 /* CoreDataStack.swift */; };
 		218D4E8D26345131003D3714 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D4E8C26345131003D3714 /* Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2168A610262DF06700C61A12 /* SpaceFlightNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceFlightNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		214C9C262635D0CA001AB356 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		214C9C2A2635D5D8001AB356 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		214C9C2F2635E9A5001AB356 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		214C9C322635F4AA001AB356 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2168A610262DF06700C61A12 /* SpaceFlightNews1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceFlightNews1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2168A613262DF06700C61A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2168A615262DF06700C61A12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2168A617262DF06700C61A12 /* NewsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionView.swift; sourceTree = "<group>"; };
@@ -33,10 +39,8 @@
 		2168A622262DF06800C61A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2168A624262DF06800C61A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2168A62D262DF3DC00C61A12 /* NewsCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCells.swift; sourceTree = "<group>"; };
-		218D4E7E26344342003D3714 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		218D4E8226344672003D3714 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = "<group>"; };
 		218D4E8326344672003D3714 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		218D4E8826344713003D3714 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		218D4E8C26345131003D3714 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214C9C1D2635C8C3001AB356 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				214C9C262635D0CA001AB356 /* NetworkingService.swift */,
+				214C9C2A2635D5D8001AB356 /* PersistenceService.swift */,
+				214C9C2F2635E9A5001AB356 /* DataStore.swift */,
+				214C9C322635F4AA001AB356 /* Endpoint.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		2168A607262DF06700C61A12 = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +79,7 @@
 		2168A611262DF06700C61A12 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2168A610262DF06700C61A12 /* SpaceFlightNews.app */,
+				2168A610262DF06700C61A12 /* SpaceFlightNews1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,12 +87,11 @@
 		2168A612262DF06700C61A12 /* SpaceFlightNews */ = {
 			isa = PBXGroup;
 			children = (
-				218D4E8726344700003D3714 /* Model */,
+				214C9C1D2635C8C3001AB356 /* Data */,
 				2199FA0C262DF96100F0DB9C /* Storybords */,
 				2168A62C262DF3CC00C61A12 /* View */,
 				2168A613262DF06700C61A12 /* AppDelegate.swift */,
 				2168A615262DF06700C61A12 /* SceneDelegate.swift */,
-				218D4E7E26344342003D3714 /* APIService.swift */,
 				218D4E8C26345131003D3714 /* Extention.swift */,
 				2168A61F262DF06800C61A12 /* Assets.xcassets */,
 				2168A624262DF06800C61A12 /* Info.plist */,
@@ -95,14 +109,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		218D4E8726344700003D3714 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				218D4E8826344713003D3714 /* CoreDataStack.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2199FA0C262DF96100F0DB9C /* Storybords */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2168A60F262DF06700C61A12 /* SpaceFlightNews */ = {
+		2168A60F262DF06700C61A12 /* SpaceFlightNews1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2168A627262DF06800C61A12 /* Build configuration list for PBXNativeTarget "SpaceFlightNews" */;
+			buildConfigurationList = 2168A627262DF06800C61A12 /* Build configuration list for PBXNativeTarget "SpaceFlightNews1" */;
 			buildPhases = (
 				2168A60C262DF06700C61A12 /* Sources */,
 				2168A60D262DF06700C61A12 /* Frameworks */,
@@ -127,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = SpaceFlightNews;
+			name = SpaceFlightNews1;
 			productName = SpaceFlightNews;
-			productReference = 2168A610262DF06700C61A12 /* SpaceFlightNews.app */;
+			productReference = 2168A610262DF06700C61A12 /* SpaceFlightNews1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2168A60B262DF06700C61A12 /* Build configuration list for PBXProject "SpaceFlightNews" */;
+			buildConfigurationList = 2168A60B262DF06700C61A12 /* Build configuration list for PBXProject "SpaceFlightNews1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2168A60F262DF06700C61A12 /* SpaceFlightNews */,
+				2168A60F262DF06700C61A12 /* SpaceFlightNews1 */,
 			);
 		};
 /* End PBXProject section */
@@ -183,13 +189,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				218D4E8526344672003D3714 /* News+CoreDataProperties.swift in Sources */,
+				214C9C302635E9A5001AB356 /* DataStore.swift in Sources */,
+				214C9C2B2635D5D8001AB356 /* PersistenceService.swift in Sources */,
+				214C9C332635F4AA001AB356 /* Endpoint.swift in Sources */,
 				2168A62E262DF3DC00C61A12 /* NewsCells.swift in Sources */,
 				2168A618262DF06700C61A12 /* NewsCollectionView.swift in Sources */,
-				218D4E8926344713003D3714 /* CoreDataStack.swift in Sources */,
 				218D4E8D26345131003D3714 /* Extention.swift in Sources */,
 				2168A614262DF06700C61A12 /* AppDelegate.swift in Sources */,
 				2168A616262DF06700C61A12 /* SceneDelegate.swift in Sources */,
-				218D4E7F26344342003D3714 /* APIService.swift in Sources */,
+				214C9C272635D0CA001AB356 /* NetworkingService.swift in Sources */,
 				218D4E8426344672003D3714 /* News+CoreDataClass.swift in Sources */,
 				2168A61E262DF06700C61A12 /* SpaceFlightNews.xcdatamodeld in Sources */,
 			);
@@ -374,7 +382,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2168A60B262DF06700C61A12 /* Build configuration list for PBXProject "SpaceFlightNews" */ = {
+		2168A60B262DF06700C61A12 /* Build configuration list for PBXProject "SpaceFlightNews1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2168A625262DF06800C61A12 /* Debug */,
@@ -383,7 +391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2168A627262DF06800C61A12 /* Build configuration list for PBXNativeTarget "SpaceFlightNews" */ = {
+		2168A627262DF06800C61A12 /* Build configuration list for PBXNativeTarget "SpaceFlightNews1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2168A628262DF06800C61A12 /* Debug */,

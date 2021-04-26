@@ -36,9 +36,10 @@ class NewsCells: UICollectionViewCell {
     }
     
     func setNewsCellWith(news: News) {
+        
         DispatchQueue.main.async {
             self.cellLabel.text = news.title
-            if let url = news.imageUrl {
+            if let url = news.imageUrl{
                 self.cellImage.loadImageUsingCacheWithURLString(url, placeHolder: UIImage(named: "bwairborne"))
             }
         }
