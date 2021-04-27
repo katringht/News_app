@@ -13,7 +13,7 @@ class NetworkingService {
     static let shared = NetworkingService()
 
     lazy var endPoint: String = {
-        return "https://www.spaceflightnewsapi.net/api/v2/articles"
+        return "https://www.hackingwithswift.com/samples/petitions-1.json"
     }()
 
     func getDataWith(completion: @escaping (Result<[[String: AnyObject]]>) -> Void) {
@@ -29,7 +29,7 @@ class NetworkingService {
 }
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
-                    guard let itemsJsonArray = json["result"] as? [[String: AnyObject]] else {
+                    guard let itemsJsonArray = json["results"] as? [[String: AnyObject]] else {
                         return completion(.Error(error?.localizedDescription ?? "There are no new Items to show"))
                     }
                     DispatchQueue.main.async {

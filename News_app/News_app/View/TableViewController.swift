@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class TableViewController: UITableViewController{
     
     lazy var fetchedhResultController: NSFetchedResultsController<NSFetchRequestResult> = {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: News.self))
@@ -23,16 +23,20 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         super.viewDidLoad()
 
         title = "Geopolitical News"
+
+        updateTable()
+    }
+    
+    func updateTable() {
         do {
             try self.fetchedhResultController.performFetch()
             print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
         } catch let error  {
             print("ERROR: \(error)")
         }
-        
         let service = NetworkingService.shared
         service.getDataWith { (result) in
-            switch result{
+            switch result {
             case .Success(let data):
                 self.clearData()
                 self.saveInCoreDataWith(array: data)
@@ -72,7 +76,6 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         }
     }
     
-    
     private func clearData() {
         do {
             let context = PersistenceService.shared.persistentContainer.viewContext
@@ -87,7 +90,6 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         }
     }
     
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.fetchedhResultController.sections?[0].numberOfObjects {
@@ -110,13 +112,30 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-//        vc.detailItem = petitions[indexPath.row]
-//        if let news = fetchedhResultController.object(at: indexPath) as? News {
-//                vc.detailItem?.text = news.title?.uppercased()
-////                cell.detailTextLabel?.text = news.body
-////                vc.detailItem = news.title
-//        }
-        vc.detailItem = "gg"
+        if let news = fetchedhResultController.object(at: indexPath) as? News {
+            vc.detailItem.text = news.title?.uppercased()
+            vc.detailBodyItem.text = news.body
+        }
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension TableViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            self.tableView.insertRows(at: [newIndexPath!], with: .automatic)
+        case .delete:
+            self.tableView.deleteRows(at: [indexPath!], with: .automatic)
+        default:
+            break
+        }
+    }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.tableView.endUpdates()
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
     }
 }
