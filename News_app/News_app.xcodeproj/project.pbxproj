@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21012A23263727140027B8D0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21012A22263727140027B8D0 /* DetailViewController.swift */; };
+		2181EA8E271B29E8002CD378 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2181EA8D271B29E8002CD378 /* TableViewCell.swift */; };
 		219ECB8B2636FF5400A1FFF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ECB8A2636FF5400A1FFF4 /* AppDelegate.swift */; };
 		219ECB8D2636FF5400A1FFF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ECB8C2636FF5400A1FFF4 /* SceneDelegate.swift */; };
 		219ECB922636FF5400A1FFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219ECB902636FF5400A1FFF4 /* Main.storyboard */; };
@@ -19,10 +20,14 @@
 		219ECBAF2636FFEB00A1FFF4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ECBAE2636FFEB00A1FFF4 /* TableViewController.swift */; };
 		219ECBB22637007800A1FFF4 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ECBB12637007800A1FFF4 /* NetworkingService.swift */; };
 		219ECBB5263700A400A1FFF4 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ECBB4263700A400A1FFF4 /* PersistenceService.swift */; };
+		21A835FF271ACBA700956D82 /* Result_enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A835FE271ACBA700956D82 /* Result_enum.swift */; };
+		21A83603271ACDF200956D82 /* Fetch_UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A83602271ACDF200956D82 /* Fetch_UpdateService.swift */; };
+		21A83606271AD28B00956D82 /* TableViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A83605271AD28B00956D82 /* TableViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21012A22263727140027B8D0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2181EA8D271B29E8002CD378 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		219ECB872636FF5400A1FFF4 /* News_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		219ECB8A2636FF5400A1FFF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		219ECB8C2636FF5400A1FFF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		219ECBAE2636FFEB00A1FFF4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		219ECBB12637007800A1FFF4 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		219ECBB4263700A400A1FFF4 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		21A835FE271ACBA700956D82 /* Result_enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_enum.swift; sourceTree = "<group>"; };
+		21A83602271ACDF200956D82 /* Fetch_UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_UpdateService.swift; sourceTree = "<group>"; };
+		21A83605271AD28B00956D82 /* TableViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2181EA8C271B29CE002CD378 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2181EA8D271B29E8002CD378 /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		219ECB7E2636FF5400A1FFF4 = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +84,12 @@
 		219ECB892636FF5400A1FFF4 /* News_app */ = {
 			isa = PBXGroup;
 			children = (
+				2181EA8C271B29CE002CD378 /* View */,
+				21A83604271AD25600956D82 /* Extensions */,
 				219ECBA52636FF8C00A1FFF4 /* Networking */,
 				219ECBA42636FF8400A1FFF4 /* Model */,
 				219ECBA32636FF6400A1FFF4 /* Storyboard */,
-				219ECBA22636FF5C00A1FFF4 /* View */,
+				219ECBA22636FF5C00A1FFF4 /* Controller */,
 				219ECB8A2636FF5400A1FFF4 /* AppDelegate.swift */,
 				219ECB8C2636FF5400A1FFF4 /* SceneDelegate.swift */,
 				219ECB962636FF5500A1FFF4 /* Assets.xcassets */,
@@ -81,13 +99,13 @@
 			path = News_app;
 			sourceTree = "<group>";
 		};
-		219ECBA22636FF5C00A1FFF4 /* View */ = {
+		219ECBA22636FF5C00A1FFF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				219ECBAE2636FFEB00A1FFF4 /* TableViewController.swift */,
 				21012A22263727140027B8D0 /* DetailViewController.swift */,
 			);
-			path = View;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		219ECBA32636FF6400A1FFF4 /* Storyboard */ = {
@@ -113,8 +131,18 @@
 			children = (
 				219ECBB12637007800A1FFF4 /* NetworkingService.swift */,
 				219ECBB4263700A400A1FFF4 /* PersistenceService.swift */,
+				21A835FE271ACBA700956D82 /* Result_enum.swift */,
+				21A83602271ACDF200956D82 /* Fetch_UpdateService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		21A83604271AD25600956D82 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21A83605271AD28B00956D82 /* TableViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,13 +215,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2181EA8E271B29E8002CD378 /* TableViewCell.swift in Sources */,
 				21012A23263727140027B8D0 /* DetailViewController.swift in Sources */,
 				219ECB8B2636FF5400A1FFF4 /* AppDelegate.swift in Sources */,
 				219ECBAF2636FFEB00A1FFF4 /* TableViewController.swift in Sources */,
 				219ECBA82636FFCB00A1FFF4 /* News+CoreDataClass.swift in Sources */,
 				219ECB952636FF5400A1FFF4 /* News_app.xcdatamodeld in Sources */,
+				21A83606271AD28B00956D82 /* TableViewControllerExtension.swift in Sources */,
+				21A835FF271ACBA700956D82 /* Result_enum.swift in Sources */,
 				219ECBA92636FFCB00A1FFF4 /* News+CoreDataProperties.swift in Sources */,
 				219ECBB22637007800A1FFF4 /* NetworkingService.swift in Sources */,
+				21A83603271ACDF200956D82 /* Fetch_UpdateService.swift in Sources */,
 				219ECB8D2636FF5400A1FFF4 /* SceneDelegate.swift in Sources */,
 				219ECBB5263700A400A1FFF4 /* PersistenceService.swift in Sources */,
 			);

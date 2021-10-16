@@ -50,8 +50,3 @@ class NetworkingService {
             }.resume()
     }
 }
-
-enum Result<T> {
-    case Success(T)
-    case Error(String)
-}
