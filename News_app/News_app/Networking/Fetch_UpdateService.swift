@@ -45,7 +45,7 @@ class Fetch_UpdateService {
         vc.present(ac, animated: true)
     }
     
-    func createNewsEntityFrom(dictionary : [String: AnyObject]) -> NSManagedObject? {
+    func createNewsEntityFrom(dictionary : parser) -> NSManagedObject? {
         let context = PersistenceService.shared.persistentContainer.viewContext
         
         if let newsEntity = NSEntityDescription.insertNewObject(forEntityName: "News", into: context) as? News {
@@ -56,7 +56,7 @@ class Fetch_UpdateService {
         return nil
     }
     
-    func saveInCoreDataWith(array: [[String: AnyObject]]) {
+    func saveInCoreDataWith(array: [parser]) {
         _ = array.map{self.createNewsEntityFrom(dictionary: $0)}
         do {
             try PersistenceService.shared.persistentContainer.viewContext.save()

@@ -7,16 +7,19 @@
 
 import Foundation
 
+typealias parser = [String: AnyObject]
+
 class NetworkingService {
     
     private init() {}
     static let shared = NetworkingService()
+    
 
     lazy var endPoint: String = {
         return "https://www.hackingwithswift.com/samples/petitions-1.json"
     }()
 
-    func getDataWith(completion: @escaping (Result<[[String: AnyObject]]>) -> Void) {
+    func getDataWith(completion: @escaping (Result<[parser]>) -> Void) {
         
         let URLString = endPoint
         
@@ -35,7 +38,7 @@ class NetworkingService {
             
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
-                    guard let itemsJsonArray = json["results"] as? [[String: AnyObject]] else {
+                    guard let itemsJsonArray = json["results"] as? [parser] else {
                         return completion(.Error(error?.localizedDescription ?? "There are no new Items to show"))
                     }
                     
